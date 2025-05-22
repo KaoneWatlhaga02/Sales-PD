@@ -110,20 +110,20 @@ if not st.session_state.logged_in:
 
 if 'targets' not in st.session_state:
     st.session_state.targets = {
-        'team_monthly_target': 100000,  # Default team target
+        'team_monthly_target': 30000,  # Default team target
         'user_targets': {
-            "David Lee": 25000,
-            "James Smith": 30000,
-            "Maria Garcia": 35000,
-            "Michael Brown": 40000,
-            "Sarah Johnson": 45000
+            "David Lee": 7000,
+            "James Smith": 7500,
+            "Maria Garcia": 9000,
+            "Michael Brown": 10000,
+            "Sarah Johnson": 12000
         },
         'product_targets': {
             # Add your product targets here
-            "AI Virtual Assistant": 40000,
-            "AI Chatbot": 35000,
-            "Smart Scheduling Bot": 30000,
-            "Sales Dashboard": 25000
+            "AI Virtual Assistant": 10000,
+            "AI Chatbot": 9000,
+            "Smart Scheduling Bot": 8000,
+            "Sales Dashboard": 6000
         }
     }
 
