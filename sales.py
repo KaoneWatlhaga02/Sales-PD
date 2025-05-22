@@ -383,15 +383,8 @@ with tab3:
         day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         daily_traffic = df_filtered['day_name'].value_counts().reindex(day_order, fill_value=0)
         weekday_avg = daily_traffic[:5].mean()
-        weekend_avg = daily_traffic[-2:]
-
-        if weekday_avg == 0:
-            weekend_diff = 0
-            weekend_label = "<b>Not enough weekday data</b>"
-        else:
-            weekend_diff = int((weekend_avg - weekday_avg) / weekday_avg * 100)
-            weekend_label = f"<b>Weekend Traffic: {weekend_diff}% {'Higher' if weekend_diff > 0 else 'Lower'}</b> vs Weekdays"
-
+        weekend_diff = int((daily_traffic[-2:].mean() - weekday_avg) / weekday_avg * 100)
+        
         fig = px.bar(
             x=daily_traffic.index, 
             y=daily_traffic.values,
