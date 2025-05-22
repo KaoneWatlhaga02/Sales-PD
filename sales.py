@@ -388,7 +388,7 @@ with tab3:
         if weekday_avg == 0:
             weekend_diff = 0
             weekend_label = "<b>Not enough weekday data</b>"
-        else
+        else:
             weekend_diff = int((weekend_avg - weekday_avg) / weekday_avg * 100)
             weekend_label = f"<b>Weekend Traffic: {weekend_diff}% {'Higher' if weekend_diff > 0 else 'Lower'}</b> vs Weekdays"
 
