@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #b28cc1;
+    color: #333;
+}
+
+header, footer {
+    visibility: hidden;
+}
+
+div.block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Title Styling */
+h1 {
+    color: #4CAF50;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Styling */
+.sidebar .sidebar-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.sidebar .sidebar-content h2 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar .sidebar-content select, .sidebar .sidebar-content input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Plotly Chart Styling */
+.plotly-chart {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Column Styling */
+.column {
+    padding: 1rem;
+}
+
+.column h2 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
