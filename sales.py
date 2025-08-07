@@ -310,6 +310,13 @@ metrics = compute_common_metrics(df_filtered)
 team_performance = df_filtered[(df_filtered['sales_member'].notna()) & 
                              (df_filtered['sales_member'] != 'Not Commissionable')]
 
+hourly_traffic = metrics['hourly_traffic']
+if not hourly_traffic.empty:
+    peak_hour = hourly_traffic.idxmax()
+else:
+    peak_hour = "No data"  # or some default, e.g. -1 or "No data"
+
+
 @st.cache_data
 def compute_team_metrics(_df, df_shape):
     all_countries = pd.DataFrame({
@@ -874,3 +881,4 @@ with tab4:
                 
                 st.metric("Prediction Accuracy", f"{max(0, r2)*100:.1f}%")
                 st.caption("R² score comparing predictions to baseline")
+
